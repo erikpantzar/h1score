@@ -20,12 +20,12 @@ function list(req, res) {
 }
 
 function score(req, res) {
-    let score = new Score(); 
+    var score = new Score(); 
     score.name = req.body.name;
     score.score = req.body.score;
     score.time = new Date();
 
-    score.save((err)=> {
+    score.save(function(err) {
         if (err) {
             res.send(err);
         } else {
