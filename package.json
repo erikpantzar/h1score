@@ -1,0 +1,21 @@
+{
+  "name": "h1score",
+  "version": "0.0.1",
+  "description": "express api",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikpantzar/h1score.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikpantzar/h1score/issues"
+  },
+  "homepage": "https://github.com/erikpantzar/h1score#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.4"
+  }
+}
