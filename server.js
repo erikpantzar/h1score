@@ -4,10 +4,21 @@ const app = express();                 // define our app using express
 const bodyParser = require('body-parser');
 const hiscoreRoute = require('./api/routes/hiscore');
 
+
+//CORS middleware
+const allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'epantzar.se');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+}
+
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(allowCrossDomain);
 
 app.use('/', express.static(__dirname + '/client'));
 
