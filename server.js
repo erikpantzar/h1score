@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.use('/', express.static(__dirname + '/client'));
 
-let port = process.env.PORT || 8080;        // set our port
+var port = process.env.PORT || 8080;        // set our port
 // ROUTES FOR OUR API
 // =============================================================================
 
