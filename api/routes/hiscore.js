@@ -28,7 +28,7 @@ function score(req, res) {
 
     score.save(function(err) {
         if (err) {
-            res.send(err, req.body);
+            res.json({err, body: req.body});
         } else {
             res.json({message: 'Score posted'});
         }
