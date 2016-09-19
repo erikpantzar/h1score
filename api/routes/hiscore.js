@@ -20,6 +20,7 @@ function list(req, res) {
 }
 
 function score(req, res) {
+  console.log(req.body);
     var score = new Score(); 
     score.name = req.body.name;
     score.score = req.body.score;
@@ -27,7 +28,7 @@ function score(req, res) {
 
     score.save(function(err) {
         if (err) {
-            res.send(err);
+            res.send(err, req.body);
         } else {
             res.json({message: 'Score posted'});
         }
